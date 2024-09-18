@@ -23,16 +23,38 @@ This project solves the Towers of Hanoi problem by representing states as lists 
 
 ## Performance Comparison
 
-A comparison of BFS and A* search demonstrates the efficiency gains from using the heuristic in A* search, especially as the number of disks increases:
+Here is a detailed comparison of BFS and A* (Best-First Search) across various problem sizes, showing the number of nodes visited, maximum length of the search, solution length, and maximum depth:
 
-| n-discs | BFS Nodes | A* Nodes | BFS Depth | A* Depth |
-|---------|-----------|----------|-----------|----------|
-| 3       | 51        | 9        | 25        | 5        |
-| 4       | 216       | 49       | 53        | 13       |
-| 5       | 1351      | 117      | 286       | 18       |
-| 6       | 7246      | 347      | 736       | 39       |
-| 7       | 45453     | 981      | 4049      | 47       |
-| 8       | 265964    | 2948     | 11403     | 81       |
+### Breadth-First Search Results
+
+| *size* | Nodes visited | Max length | Soln Length | Max-depth |
+|--------|----------------|------------|-------------|-----------|
+| 3      | 51             | 25         | 7           | 7         |
+| 4      | 216            | 53         | 15          | 15        |
+| 5      | 1351           | 286        | 31          | 31        |
+| 6      | 7246           | 736        | 63          | 63        |
+| 7      | 45453          | 4049       | 127         | 127       |
+| 8      | 265964         | 11403      | 255         | 255       |
+
+### A* Search (Best-First Search) Results
+
+| *size* | Nodes visited | Max length | Soln Length | Max-depth |
+|--------|----------------|------------|-------------|-----------|
+| 3      | 9              | 5          | 7           | 8         |
+| 4      | 49             | 13         | 15          | 16        |
+| 5      | 117            | 18         | 31          | 32        |
+| 6      | 347            | 39         | 63          | 64        |
+| 7      | 981            | 47         | 127         | 128       |
+| 8      | 2948           | 81         | 255         | 258       |
+| 9      | 8637           | 125        | 511         | 512       |
+| 10     | 27882          | 276        | 1023        | 1026      |
+| 11     | 83006          | 453        | 2047        | 2048      |
+
+### Analysis
+
+For the 8-disc problem, A* search drastically reduced the number of nodes visited (from 265,964 for BFS to 2,948 for A*) and the maximum search depth (from 11,403 to 81). These improvements reflect a **98.89% reduction** in nodes visited and **99.29% reduction** in search depth, making A* search significantly more efficient for larger problem sizes.
+
+---
 
 ## How to Run the Program
 
