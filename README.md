@@ -11,9 +11,9 @@ This project solves the Towers of Hanoi problem by representing states as lists 
 - **Initial State:** Disks are stacked on peg A (smallest to largest), with Pegs B and C empty.
 - **Goal State:** All disks must be moved to peg C, following the rule that no larger disk can be placed on top of a smaller one.
 
-### Features
+## Features
 
-## Breadth-First Search (BFS) Function
+### Breadth-First Search (BFS) Function
 
 The BFS function systematically explores all possible moves level by level. It starts with the initial state and explores all child nodes before moving on to deeper levels. This ensures that BFS will find the shortest solution but becomes inefficient with larger numbers of disks as it explores all possible paths exhaustively.
 
@@ -22,7 +22,7 @@ BFS expands every node, making it computationally expensive as the number of dis
 - Explores all possible moves level by level.
 - Efficient for small problem sizes but becomes slow as the number of disks increases.
 
-## Heuristic Function in A* Search
+### Heuristic Function in A* Search
 
 The heuristic function used in A* search prioritizes moves that place larger disks in their correct positions first. This approach reduces the number of nodes visited and improves performance over BFS, particularly for larger problem sizes.
 
